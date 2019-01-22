@@ -6,12 +6,11 @@ defmodule Megalithic.Application do
   use Application
 
   def start(_type, _args) do
-    # List all child processes to be supervised
+    import Supervisor.Spec, warn: false
+
     children = [
-      # Start the endpoint when the application starts
-      MegalithicWeb.Endpoint
-      # Starts a worker by calling: Megalithic.Worker.start_link(arg)
-      # {Megalithic.Worker, arg},
+      MegalithicWeb.Endpoint,
+      worker(Megalithic.BlogService, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

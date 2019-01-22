@@ -2,3 +2,14 @@
   <h1>megalithic industries</h1>
   <p>construction in progress..</p>
 </section>
+
+<section>
+  <%= for post <- @posts do %>
+    <article class="row">
+      <h2><%= post.title %></h2>
+      <p><%= post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></p>
+      <p><%= post.intro %></p>
+      <p><a href="<%= post_path(@conn, :show, post.slug) %>">Read post</a></a>
+    </article>
+  <% end %>
+</section>
