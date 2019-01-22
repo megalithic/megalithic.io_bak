@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
 
+set -o errexit -o errtrace
 
-mix edeliver upgrade production
+echo ""
+echo "------ Building, deploying, and starting production..."
+echo ""
+
+mix edeliver build release
+mix edeliver deploy release to production
+mix edeliver start production
