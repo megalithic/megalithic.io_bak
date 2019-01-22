@@ -30,7 +30,7 @@ defmodule Megalithic.BlogPost do
     %{
       post
       | title: get_prop(props, "title"),
-        date: get_prop(props, "date") |> Timex.Parse.Duration.Parsers.ISO8601Parser.parse(),
+        date: get_prop(props, "date") |> Calendar.Date.Parse.iso8601!(),
         intro: get_prop(props, "intro"),
         content: content
     }

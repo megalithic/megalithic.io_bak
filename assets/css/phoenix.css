@@ -126,9 +126,7 @@ header nav a {
   }
   header nav ul {
     margin: 1rem;
-  }
-  .phx-logo {
-    flex-basis: 527px;
+  } .phx-logo { flex-basis: 527px;
     margin: 2rem 1rem;
   }
 }

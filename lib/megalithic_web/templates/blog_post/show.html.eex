@@ -1,6 +1,6 @@
 <p><a href="<%= Routes.page_path(@conn, :index) %>">&laquo; Back to index</a></a>
 <article>
-	<h1><%= @blog_post.title %></h1>
-  <p><%= Timex.format!(@post.date, "{Mshort} {D} {YYYY}") %></p>
-	<%= raw(@blog_post.content) %>
+	<h1><%= @post.title %></h1>
+  <p><%= @post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></p>
+	<%= raw(elem(@post.content, 1)) %>
 </article>

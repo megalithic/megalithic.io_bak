@@ -1,4 +1,4 @@
-defmodule Megalithic.BlogPostController do
+defmodule MegalithicWeb.BlogPostController do
   use MegalithicWeb, :controller
 
   def show(conn, %{"slug" => slug}) do

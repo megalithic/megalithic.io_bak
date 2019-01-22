@@ -4,7 +4,7 @@ defmodule Megalithic.MixProject do
   def project do
     [
       app: :megalithic,
-      version: "0.1.3",
+      version: "0.1.4",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -19,7 +19,7 @@ defmodule Megalithic.MixProject do
   def application do
     [
       mod: {Megalithic.Application, []},
-      extra_applications: [:logger, :runtime_tools, :timex, :yamerl]
+      extra_applications: [:logger, :runtime_tools, :calendar, :yamerl]
     ]
   end
 
@@ -42,7 +42,7 @@ defmodule Megalithic.MixProject do
       {:edeliver, "~> 1.6"},
       {:distillery, "~> 2.0.12"},
       {:earmark, "~> 1.3.1"},
-      {:timex, "~> 3.5.0"},
+      {:calendar, "~> 0.17.4"},
       {:yamerl, "~> 0.7.0"}
     ]
   end

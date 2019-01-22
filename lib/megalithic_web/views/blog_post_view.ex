@@ -1,3 +1,3 @@
-defmodule Megalithic.BlogPostView do
+defmodule MegalithicWeb.BlogPostView do
   use MegalithicWeb, :view
 end

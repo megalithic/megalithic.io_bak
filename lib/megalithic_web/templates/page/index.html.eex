@@ -1,17 +1,27 @@
 <section class="phx-hero">
-  <h1>megalithic industries</h1>
+  <h1 class="dark-red">megalithic industries</h1>
   <p>construction in progress..</p>
 </section>
 
 <%= if @posts != nil and Enum.count(@posts) > 0 do %>
-  <section class="posts">
-    <h2>thoughts</h2>
+  <section class="mw7 center avenir">
+    <h2 class="baskerville fw1 ph3 ph0-l">Thoughts</h2>
     <%= for post <- @posts do %>
-      <article class="row">
-        <h2><%= post.title %></h2>
-        <p><%= Timex.format!(post.date, "{Mshort} {D} {YYYY}") %></p>
-        <p><%= post.intro %></p>
-        <p><a href="<%= Routes.blog_post_path(@conn, :show, post.slug) %>">Read post</a></a>
+      <article class="bt bb b--black-10">
+        <a class="db pv4 ph3 ph0-l no-underline black dim" href="#0">
+          <div class="flex flex-column flex-row-ns">
+            <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+              <img src="http://mrmrs.github.io/photos/cpu.jpg" class="db" alt="Photo of a dimly lit room with a computer interface terminal.">
+            </div>
+            <div class="w-100 w-60-ns pl3-ns">
+              <h1 class="f3 fw1 baskerville mt0 lh-title"><%= post.title %></h1>
+              <p class="f6 f5-l lh-copy"><%= post.intro %></p>
+              <%# <time class="f6 db gray"><%= raw(elem(post.date, 1)) %1></time> %>
+              <time class="f6 db gray"><%= post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></time>
+              <%# <p class="f6 lh-copy mv0">By Seth Messer</p> %>
+            </div>
+          </div>
+        </a>
       </article>
     <% end %>
   </section>
