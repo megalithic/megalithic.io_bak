@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -o errexit -o errtrace
+
+echo ""
+echo "------ Deploying project..."
+echo ""
+
+mix edeliver deploy release to production
+mix edeliver start production
