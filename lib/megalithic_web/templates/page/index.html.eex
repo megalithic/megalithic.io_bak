@@ -3,13 +3,16 @@
   <p>construction in progress..</p>
 </section>
 
-<section>
-  <%= for post <- @posts do %>
-    <article class="row">
-      <h2><%= post.title %></h2>
-      <p><%= post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></p>
-      <p><%= post.intro %></p>
-      <p><a href="<%= post_path(@conn, :show, post.slug) %>">Read post</a></a>
-    </article>
-  <% end %>
-</section>
+<%= if @posts != nil and Enum.count(@posts) > 0 do %>
+  <section class="posts">
+    <h2>thoughts</h2>
+    <%= for post <- @posts do %>
+      <article class="row">
+        <h2><%= post.title %></h2>
+        <p><%= Timex.format!(post.date, "{Mshort} {D} {YYYY}") %></p>
+        <p><%= post.intro %></p>
+        <p><a href="<%= Routes.blog_post_path(@conn, :show, post.slug) %>">Read post</a></a>
+      </article>
+    <% end %>
+  </section>
+<% end %>
