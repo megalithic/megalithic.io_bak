@@ -19,7 +19,7 @@ defmodule Megalithic.MixProject do
   def application do
     [
       mod: {Megalithic.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :timex, :yamerl]
     ]
   end
 
@@ -40,7 +40,10 @@ defmodule Megalithic.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:edeliver, "~> 1.6"},
-      {:distillery, "~> 2.0.12"}
+      {:distillery, "~> 2.0.12"},
+      {:earmark, "~> 1.3.1"},
+      {:timex, "~> 3.5.0"},
+      {:yamerl, "~> 0.7.0"}
     ]
   end
 end
