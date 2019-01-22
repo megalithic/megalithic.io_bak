@@ -1,3 +1,4 @@
 <section class="phx-hero">
-  <h1><%= gettext "megalithic industries", name: "megalithic industries" %></h1>
+  <h1>megalithic industries</h1>
+  <p>construction in progress..</p>
 </section>

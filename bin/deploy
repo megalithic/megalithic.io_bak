@@ -3,8 +3,7 @@
 set -o errexit -o errtrace
 
 echo ""
-echo "------ Deploying project..."
+echo "------ Hot-swapping project on production..."
 echo ""
 
-mix edeliver deploy release to production
-mix edeliver start production
+mix edeliver upgrade production
