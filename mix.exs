@@ -4,7 +4,7 @@ defmodule Megalithic.MixProject do
   def project do
     [
       app: :megalithic,
-      version: "0.1.12",
+      version: "0.1.13",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),

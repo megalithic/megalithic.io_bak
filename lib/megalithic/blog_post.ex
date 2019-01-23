@@ -7,7 +7,7 @@ defmodule Megalithic.BlogPost do
     }
 
     :code.priv_dir(:megalithic)
-    |> Path.join(["posts", file])
+    |> Path.join(["posts/", file])
     |> File.read!()
     |> split
     |> extract(post)
