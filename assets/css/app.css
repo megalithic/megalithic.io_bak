@@ -1,8 +1,6 @@
-/* This file is for your main application css. */
-
-/* @import "./phoenix.css"; */
-
-/* .posts p { */
-/*   display: block; */
-/*   margin: 1em 0; */
-/* } */
+.post-content p {
+  max-width: 30em;
+  line-height: 1.5;
+  color: #777;
+  margin-top: 0.25em;
+}

@@ -1,6 +1,11 @@
-<p><a href="<%= Routes.page_path(@conn, :index) %>">&laquo; Back to index</a></a>
-<article>
-	<h1><%= @post.title %></h1>
-  <p><%= @post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></p>
-	<%= raw(elem(@post.content, 1)) %>
+<%# <p><a href="<%= Routes.page_path(@conn, :index) %1>">&laquo; Back to index</a></a> %>
+
+<article class="cf ph3 ph5-ns pv5">
+  <header class="fn fl-ns w-50-ns pr4-ns">
+    <h1 class="f3 mb1 mt0 lh-title post-title"><%= @post.title %></h1>
+    <time class="f6 ttu tracked gray post-date"><%= @post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></time>
+  </header>
+  <div class="fn fl-ns w-50-ns post-content">
+    <%= raw(elem(@post.content, 1)) %>
+  </div>
 </article>
