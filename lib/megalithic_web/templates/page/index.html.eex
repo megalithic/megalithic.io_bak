@@ -1,6 +1,6 @@
 <%= if @posts != nil and Enum.count(@posts) > 0 do %>
-  <section class="mw7 center avenir">
-    <h2 class="baskerville fw1 ph3 ph0-l pv2">thoughts</h2>
+  <section class="mw7 center">
+    <h2 class=" fw1 ph3 ph0-l pv2">thoughts</h2>
     <%= for post <- @posts do %>
       <article class="bt bb b--black-10">
         <a class="db pv4 ph3 ph0-l no-underline black dim" href="<%= Routes.blog_post_path(@conn, :show, post.slug) %>">
@@ -9,10 +9,9 @@
               <img src="http://mrmrs.github.io/photos/cpu.jpg" class="db" alt="Photo of a dimly lit room with a computer interface terminal.">
             </div>
             <div class="w-100 w-60-ns pl3-ns">
-              <h1 class="f4 fw1 baskerville mt0 lh-title"><%= post.title %></h1>
+              <h1 class="f4 fw1 mt0 lh-title"><%= post.title %></h1>
               <p class="f6 f5-l lh-copy"><%= post.intro %></p>
               <time class="f6 db gray"><%= post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></time>
-              <%# <p class="f6 lh-copy mv0">By Seth Messer</p> %>
             </div>
           </div>
         </a>
