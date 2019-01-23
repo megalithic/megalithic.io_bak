@@ -11,28 +11,27 @@
   <body class="pa4-l normal">
     <div class"bg-white h-100 midnight-blue pa3 ph0-l pv6-l">
       <div class="center mw7">
-        <header>
+        <header class="code">
           <section class="container">
             <div class="w-100 db">
               <div class="tl w-100">
                 <a href="/" class="link highlight-link"><span class="aquamarine">// </span> megalithic industries</a>
                 <ul class="fr list dib ma0 pa0">
-                  <li class="dib mr2-ns"><a href="/about/" class=" link hover-highlight-link">about</a></li>
-                  <li class="aquamarine dib mr2-ns">○</li>
-                  <li class="dib mr2-ns"><a href="/thoughts/" class=" link hover-highlight-link">thoughts</a></li>
+                  <li class="dib mr2-ns"><a href="/thoughts/" class="link hover-highlight-link">thoughts</a></li>
                   <li class="aquamarine dib mr2-ns">○</li>
                   <li class="dib mr2-ns"><a href="/canon/" class=" link hover-highlight-link">canon</a></li>
+                  <li class="aquamarine dib mr2-ns">○</li>
+                  <li class="dib mr2-ns"><a href="/about/" class=" link hover-highlight-link">about</a></li>
                 </ul>
               </div>
             </div>
           </section>
         </header>
-        <main role="main" class="container">
-            <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-            <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        <main role="main" class="container baskerville">
+          <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+          <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-            <%= render @view_module, @view_template, assigns %>
-          </div>
+          <%= render @view_module, @view_template, assigns %>
         </main>
       </div>
     </div>
