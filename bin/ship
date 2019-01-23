@@ -6,7 +6,9 @@ echo ""
 echo "------ Building, deploying, and starting production..."
 echo ""
 
-# rm -rfi .deliver/releases/*
+if [[ -d .deliver/releases ]]; then
+  rm -rfi .deliver/releases
+fi
 
 mix edeliver build release
 mix edeliver deploy release to production
