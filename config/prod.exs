@@ -14,7 +14,9 @@ config :megalithic, MegalithicWeb.Endpoint,
   url: [host: "megalithic.io", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
-  code_reloader: false
+  code_reloader: false,
+  root: ".",
+  version: Application.spec(:phoenix_distillery, :vsn)
 
 # Do not print debug messages in production
 config :logger, level: :info
