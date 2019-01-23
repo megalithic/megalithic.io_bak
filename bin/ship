@@ -3,7 +3,7 @@
 set -o errexit -o errtrace
 
 echo ""
-echo "------ Building, deploying, and starting production..."
+echo "------ Building, deploying, and starting production release..."
 echo ""
 
 if [[ -d .deliver/releases ]]; then

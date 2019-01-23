@@ -15,8 +15,7 @@ config :megalithic, MegalithicWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
   code_reloader: false,
-  root: ".",
-  version: Application.spec(:phoenix_distillery, :vsn)
+  root: "."
 
 # Do not print debug messages in production
 config :logger, level: :info

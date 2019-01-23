@@ -35,7 +35,7 @@ pre_erlang_clean_compile() {
 
     cd assets
     npm install
-    webpack --mode production
+    node_modules/.bin/webpack --mode production
     cd ..
 
     # run your custom task
