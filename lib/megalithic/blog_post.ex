@@ -6,7 +6,8 @@ defmodule Megalithic.BlogPost do
       slug: file_to_slug(file)
     }
 
-    Path.join(["priv/posts", file])
+    :code.priv_dir(:megalithic)
+    |> Path.join(["posts", file])
     |> File.read!()
     |> split
     |> extract(post)
