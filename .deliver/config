@@ -33,12 +33,14 @@ pre_erlang_clean_compile() {
     # prepare something
     mkdir -p priv/static # required by the phx.digest task
 
-    # npm install
-    # ./node_modules/brunch/bin/brunch build --production
-
-    cd assets && webpack --mode production && cd ..
+    cd assets
+    npm install
+    webpack --mode production
+    cd ..
 
     # run your custom task
     APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
   "
 }
+
+# vim:foldenable:foldmethod=marker:ft=sh
