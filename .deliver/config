@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+AUTO_VERSION=commit-count+git-revision+branch
 
 APP="megalithic"
 
