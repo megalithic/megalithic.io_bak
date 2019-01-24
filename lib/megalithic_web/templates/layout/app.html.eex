@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>megalithic industries</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, '/css/app.css') %>"/>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
   </head>
   <body class="pa4-l normal">
@@ -36,10 +36,6 @@
         </main>
       </div>
     </div>
-    <script type="text/javascript">
-      console.log("static_path to app.js", <%= Routes.static_path(@conn, "/js/app.js") %>)
-      console.log("static_path to app.css", <%= Routes.static_path(@conn, "/css/app.css") %>)
-    </script>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, '/js/app.js') %>"></script>
   </body>
 </html>
