@@ -10,6 +10,7 @@ if [[ -d .deliver/releases ]]; then
   rm -rf .deliver/releases
 fi
 
-mix edeliver build release
+MIX_ENV=prod mix edeliver build release --auto-version=mix-env+git-revision
+# mix edeliver build release
 mix edeliver deploy release to production
 mix edeliver start production
