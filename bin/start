@@ -6,4 +6,5 @@ echo ""
 echo "------ Starting up megalithic app in dev mode..."
 echo ""
 
+mix deps.get
 mix phx.server
