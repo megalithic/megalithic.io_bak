@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -o errexit -o errtrace
+
+echo ""
+echo "------ Starting up megalithic app in dev mode..."
+echo ""
+
+mix phx.server
