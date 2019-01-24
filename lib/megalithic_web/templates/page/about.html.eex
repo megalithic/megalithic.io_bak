@@ -20,7 +20,11 @@
       Oh, and I have the dopest GSD mix, Kona, for a best bud.
     </p>
 
+    <p class="f4 tl measure-narrow lh-copy p">
+      I have an unhealthy obsession with <a href="https://github.com/megalithic/dotfiles" title="dotfiles!">dotfiles</a>.
+    </p>
     <p class="tc w-50 f4">∞</p>
+
     <%# <p class="f4 tl measure-narrow lh-copy p tc"> %>
     <%#   <img class="w-50 br3" src="<%= Routes.static_path(@conn, "/images/kona.jpg") %1>" alt="kona!" /> %>
     <%# </p> %>

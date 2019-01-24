@@ -34,6 +34,14 @@
 
           <%= render @view_module, @view_template, assigns %>
         </main>
+        <%# <footer class="pv5 pv6-l"> %>
+        <%#   <p class="f6"><span class="dib mr4 mr5-ns">&copy; <%= DateTime.utc_now().year %1> megalithic industries</span> %>
+        <%#     <1%# <a class="link hover-gold" href="https://www.github.com/megalithic" title="github">github</a> / %1> %>
+        <%#     <1%# <a class="link hover-gold" href="https://www.twitter.com/megalithic" title="twitter">twitter</a> / %1> %>
+        <%#     <1%# <a class="link hover-gold" href="https://www.instagram.com/megalithic" title="instagram">instagram</a> / %1> %>
+        <%#     <1%# <a class="link hover-gold" href="mailto:seth.messer@gmail.com" title="email">email</a> / %1> %>
+        <%#   </p> %>
+        <%# </footer> %>
       </div>
     </div>
 
