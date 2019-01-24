@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :megalithic, MegalithicWeb.Endpoint,
-  http: [:inet6, port: 4000],
+  # http: [:inet6, port: 4000],
+  http: [port: {:system, "PORT"}],
   url: [host: "megalithic.io", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,

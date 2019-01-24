@@ -22,8 +22,8 @@ echo "------ Installing project dependencies and setting up database..."
 echo ""
 
 mix deps.get
-/* mix ecto.create */
-/* mix ecto.migrate */
+# mix ecto.create
+# mix ecto.migrate
 # mix ecto.seed # not supported in recent versions of octo/elixir
 
 # echo ""

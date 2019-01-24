@@ -4,7 +4,7 @@ defmodule Megalithic.MixProject do
   def project do
     [
       app: :megalithic,
-      version: "0.1.21",
+      version: "0.1.22",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -19,7 +19,7 @@ defmodule Megalithic.MixProject do
   def application do
     [
       mod: {Megalithic.Application, []},
-      extra_applications: [:logger, :runtime_tools, :calendar, :yamerl]
+      extra_applications: [:logger, :runtime_tools, :calendar, :yamerl, :edeliver]
     ]
   end
 

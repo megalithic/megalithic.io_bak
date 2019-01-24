@@ -1,49 +1,58 @@
+#!/usr/bin/env bash
+
 APP="megalithic"
 
 BUILD_HOST="megalithic.io"
-BUILD_USER="replicant"
-BUILD_AT="/home/replicant/app_build"
+BUILD_USER="deploy"
+BUILD_AT="/tmp/edeliver/$APP/builds"
+
+START_DEPLOY=true
+CLEAN_DEPLOY=true
 
 # prevent re-installing node modules; this defaults to "."
-# GIT_CLEAN_PATHS="_build rel priv/static"
+GIT_CLEAN_PATHS="_build rel priv/static"
 
 PRODUCTION_HOSTS="megalithic.io"
-PRODUCTION_USER="replicant"
-DELIVER_TO="/home/replicant/app_release"
+PRODUCTION_USER="deploy"
+DELIVER_TO="/home/deploy/apps"
 
+# For Phoenix projects, symlink prod.secret.exs to our tmp source
 pre_erlang_get_and_update_deps() {
-  local _prod_secret_path="/home/replicant/app_config/prod.secret.exs"
+  local _prod_secret_path="/home/deploy/apps/$APP/secret/prod.secret.exs"
   if [ "$TARGET_MIX_ENV" = "prod" ]; then
-    __sync_remote "
-      ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
-    "
+    status "Linking '$_prod_secret_path'"
+      __sync_remote "
+        [ -f ~/.profile ] && source ~/.profile
+        mkdir -p '$BUILD_AT'
+        ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
+      "
   fi
 }
 
 pre_erlang_clean_compile() {
+  status "Running npm install"
+    __sync_remote "
+      [ -f ~/.profile ] && source ~/.profile
+      set -e
+      cd '$BUILD_AT'/assets
+      npm install
+    "
+
+  status "Compiling assets"
+    __sync_remote "
+      [ -f ~/.profile ] && source ~/.profile
+      set -e
+      cd '$BUILD_AT'/assets
+      node_modules/.bin/webpack --mode production --silent
+    "
+
   status "Running phx.digest" # log output prepended with "----->"
   __sync_remote " # runs the commands on the build host
-    # [ -f ~/.profile ] && source ~/.profile # load profile (optional)
-    source ~/.profile
-
-    # echo \$PATH # check if rbenv is in the path
+    [ -f ~/.profile ] && source ~/.profile # load profile (optional)
     set -e # fail if any command fails (recommended)
     cd '$BUILD_AT' # enter the build directory on the build host (required)
-
-    # prepare something
     mkdir -p priv/static # required by the phx.digest task
-
-    mix deps.get --only prod
-    MIX_ENV=prod mix compile
-    cd assets
-    npm install
-    node_modules/.bin/webpack --mode production
-    cd ..
-
-    # run your custom task
-    # APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
-    APP='$APP' MIX_ENV=prod $MIX_CMD phx.digest $SILENCE
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest.clean $SILENCE
   "
 }
-
-# vim:foldenable:foldmethod=marker:ft=sh
