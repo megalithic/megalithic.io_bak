@@ -2,6 +2,7 @@
 title: This is the beginning
 date: 2019-01-22
 intro: Here we have the beginning of something beautiful.
+image: this-is-the-beginning.jpg
 ---
 
 There are so many things soon to come here at [megalithic industries](https://megalithic.io). I haven't run a personal website in quite some time, so there is much to get used to, and get reacquainted.
