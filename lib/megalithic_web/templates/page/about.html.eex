@@ -16,9 +16,9 @@
     <p class="f4 tl measure-narrow lh-copy p">
       Oh, and I have the dopest GSD mix, Kona, for a best bud.
     </p>
-    <p class="f4 tl measure-narrow lh-copy p tc">
-      <img class="w-50 br3" src="<%= Routes.static_path(@conn, "/images/kona.jpg") %>" alt="kona!" />
-    </p>
+    <%# <p class="f4 tl measure-narrow lh-copy p tc"> %>
+    <%#   <img class="w-50 br3" src="<%= Routes.static_path(@conn, "/images/kona.jpg") %1>" alt="kona!" /> %>
+    <%# </p> %>
   </div>
   <div class="mt5">
     <header class="fn w-50-ns pr4-ns">
