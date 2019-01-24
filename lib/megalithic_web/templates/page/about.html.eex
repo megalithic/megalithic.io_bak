@@ -26,10 +26,10 @@
     </header>
 
     <p class="mt4">
-      <span class="b mr2"><a href="https://www.github.com/megalithic" alt="github" class="link">github</a></span>
-      <span class="b mr2"><a href="https://www.twitter.com/megalithic" alt="twitter" class="link">twitter</a></span>
-      <span class="b mr2"><a href="https://www.instagram.com/megalithic" alt="instagram" class="link">instagram</a></span>
-      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" alt="email" class="link">email</a></span>
+      <span class="b mr2"><a href="https://www.github.com/megalithic" title="github" class="link">github</a></span>
+      <span class="b mr2"><a href="https://www.twitter.com/megalithic" title="twitter" class="link">twitter</a></span>
+      <span class="b mr2"><a href="https://www.instagram.com/megalithic" title="instagram" class="link">instagram</a></span>
+      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" title="email" class="link">email</a></span>
     </p>
   </div>
 </section>
