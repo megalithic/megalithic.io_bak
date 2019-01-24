@@ -12,12 +12,12 @@
   <body class="pa4-l normal">
     <div class"bg-white h-100 pa3 ph0-l pv6-l">
       <div class="center mw7">
-        <header class="">
+        <header class="pa3 pa0-ns">
           <section class="container">
             <div class="w-100 db">
               <nav class="tl w-100">
-                <a href="/" class="link highlight-link hover-light-silver">megalithic industries</a>
-                <ul class="fr list dib ma0 pa0">
+                <a href="/" class="link highlight-link hover-light-silver f4">megalithic industries</a>
+                <ul class="fn fr-ns list dib ma0 pa0 mt3 mt0-ns">
                   <li class="dib mr2-ns"><a href="/thoughts/" class="link hover-gold">thoughts</a></li>
                   <li class="dib mr2-ns">○</li>
                   <li class="dib mr2-ns"><a href="/canon/" class=" link hover-gold">canon</a></li>
@@ -28,7 +28,7 @@
             </div>
           </section>
         </header>
-        <main role="main" class="container">
+        <main role="main" class="ph3 ph0-l container">
           <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
           <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 

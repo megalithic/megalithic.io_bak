@@ -1,7 +1,7 @@
 <%# <p><a href="<%= Routes.page_path(@conn, :index) %1>">&laquo; Back to index</a></a> %>
 
-<h2 class="fw1 ph3 ph0-l pv2">thoughts</h2>
-<article class="cf ph0 ph0-ns pv4 bt b--black-10">
+<h2 class="fw1 pv2">thoughts</h2>
+<article class="cf pv4 bt b--black-10">
   <header class="fn fl-ns w-50-ns pr4-ns">
     <h1 class="fw1 f4 mb1 mt0 lh-title post-title"><%= @post.title %></h1>
     <time class="f6 ttu tracked gray post-date"><%= @post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></time>
