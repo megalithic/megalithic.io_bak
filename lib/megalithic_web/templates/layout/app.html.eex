@@ -15,7 +15,7 @@
         <header class="">
           <section class="container">
             <div class="w-100 db">
-              <div class="tl w-100">
+              <nav class="tl w-100">
                 <a href="/" class="link highlight-link hover-light-silver">megalithic industries</a>
                 <ul class="fr list dib ma0 pa0">
                   <li class="dib mr2-ns"><a href="/thoughts/" class="link hover-gold">thoughts</a></li>
@@ -24,7 +24,7 @@
                   <li class="dib mr2-ns">○</li>
                   <li class="dib mr2-ns"><a href="/about/" class=" link hover-gold">about</a></li>
                 </ul>
-              </div>
+              </nav>
             </div>
           </section>
         </header>

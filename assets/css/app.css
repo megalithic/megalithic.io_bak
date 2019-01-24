@@ -2,29 +2,29 @@ body {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.p {
+p {
   max-width: 30em;
   line-height: 1.5;
   color: #777;
   margin-top: 0.25em;
 }
 
-.p a {
+p a {
   color: #ffb700;
   opacity: 1;
   transition: opacity 0.15s ease-in;
 }
-.p a:hover,
-.p a:focus {
+p a:hover,
+p a:focus {
   opacity: 0.5;
   transition: opacity 0.15s ease-in;
 }
 
-.link,
-.link:active,
-.link:focus,
-.link:hover,
-.link:link,
+nav a,
+nav a:active,
+nav a:focus,
+nav a:hover,
+nav a:link,
 .link:visited {
   color: #1c336a;
   transition: color 0.15s ease-in;
