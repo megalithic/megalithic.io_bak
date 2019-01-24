@@ -36,6 +36,10 @@
         </main>
       </div>
     </div>
+    <script type="text/javascript">
+      console.log("static_path to app.js", <%= Routes.static_path(@conn, "/js/app.js") %>)
+      console.log("static_path to app.css", <%= Routes.static_path(@conn, "/css/app.css") %>)
+    </script>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
