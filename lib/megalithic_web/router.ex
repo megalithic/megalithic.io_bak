@@ -17,7 +17,10 @@ defmodule MegalithicWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/:slug", BlogPostController, :show
+    get "/about", PageController, :about
+    get "/canon", PageController, :canon
+    get "/thoughts", BlogPostController, :index
+    get "/thoughts/:slug", BlogPostController, :show
   end
 
   # Other scopes may use custom stacks.
