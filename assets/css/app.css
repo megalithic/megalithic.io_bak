@@ -5,7 +5,7 @@ body {
 p {
   max-width: 30em;
   line-height: 1.5;
-  color: #777;
+  color: #777777;
   margin-top: 0.25em;
 }
 
@@ -26,7 +26,7 @@ nav a:focus,
 nav a:hover,
 nav a:link,
 .link:visited {
-  color: #1c336a;
+  color: #333333;
   transition: color 0.15s ease-in;
 }
 

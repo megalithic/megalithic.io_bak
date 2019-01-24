@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
   </head>
   <body class="pa4-l normal">
-    <div class"bg-white h-100 midnight-blue pa3 ph0-l pv6-l">
+    <div class"bg-white h-100 pa3 ph0-l pv6-l">
       <div class="center mw7">
         <header class="">
           <section class="container">
