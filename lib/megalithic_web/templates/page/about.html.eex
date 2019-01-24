@@ -1,10 +1,10 @@
 <section class="mw7 center">
   <h2 class=" fw1 ph3 ph0-l pv2">about</h2>
-  <div class="mt5 relative top-2-l measure-narrow fr-l">
+  <div class="mt0 relative top-1-l measure-narrow fr-l">
     <blockquote class="pa0 ml0 b"><em>"I believe in Christianity as I believe that the sun has risen: not only because I see it, but because by it I see everything else."</em></blockquote>
     <cite class="highlight-header">- C.S. Lewis</cite>
   </div>
-  <div class="mt5">
+  <div class="mt2">
     <p class="f4 tl measure-narrow lh-copy p">
       Hey, Seth here. I presently work as a software engineer at <a href="https://enbala.com" alt="enbala">enbala</a>,
       building software for more sustainable energy for now and the future. I get to play with awesome tech like <a href="https://elixir-lang.org" alt="elixir">elixir</a> and <a href="https://elm-lang.org" alt="elm">elm</a>.
@@ -15,9 +15,21 @@
     </p>
     <p class="f4 tl measure-narrow lh-copy p">
       Oh, and I have the dopest GSD mix, Kona, for a best bud.
-      <br />
-      <br />
-      <img src="<%= Routes.static_path(@conn, "/images/kona.jpg") %>" alt="kona!" />
+    </p>
+    <p class="f4 tl measure-narrow lh-copy p tc">
+      <img class="w-50 br3" src="<%= Routes.static_path(@conn, "/images/kona.jpg") %>" alt="kona!" />
+    </p>
+  </div>
+  <div class="mt5">
+    <header class="fn w-50-ns pr4-ns">
+      <h1 class="fw1 f4 mb1 mt0 lh-title">get at me...</h1>
+    </header>
+
+    <p class="mt4">
+      <span class="b mr2"><a href="https://www.github.com/megalithic" alt="github" class="link">github</a></span>
+      <span class="b mr2"><a href="https://www.twitter.com/megalithic" alt="twitter" class="link">twitter</a></span>
+      <span class="b mr2"><a href="https://www.instagram.com/megalithic" alt="instagram" class="link">instagram</a></span>
+      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" alt="email" class="link">email</a></span>
     </p>
   </div>
 </section>
