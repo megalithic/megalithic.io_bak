@@ -9,7 +9,7 @@
               <img src="<%= Routes.static_path(@conn, "/images/#{post.image}") %>" class="db" alt="<%= post.image %>">
             </div>
             <div class="w-100 w-60-ns pl3-ns">
-              <h1 class="f4 fw1 mt0 lh-title"><%= post.title %></h1>
+              <h1 class="f4 fw1 mt0 lh-title ttc"><%= post.title %></h1>
               <p class="f6 f5-l lh-copy"><%= post.intro %></p>
               <time class="f6 db gray"><%= post.date |> Calendar.Strftime.strftime!("%h %e %Y") %></time>
             </div>
