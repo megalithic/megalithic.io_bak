@@ -7,21 +7,21 @@
 
   <div class="mt4 mt2-ns">
     <p class="f4 tl measure-narrow lh-copy p">
-      Hey, Seth here. I presently work as a software engineer at <a href="https://enbala.com" alt="enbala">enbala</a>,
-      building software for more sustainable energy for now and the future. I get to play with awesome tech like <a href="https://elixir-lang.org" alt="elixir">elixir</a> and <a href="https://elm-lang.org" alt="elm">elm</a>.
+      Hey, Seth here. I presently work as a remote software engineer at <a href="https://enbala.com" title="enbala" target="_blank" rel="noopener noreferrer">enbala</a>,
+      building software for distributed and alternative energy. I get to play with awesome tech like <a href="https://elixir-lang.org" title="elixir" target="_blank" rel="noopener noreferrer">elixir</a> and <a href="https://elm-lang.org" title="elm" target="_blank" rel="noopener noreferrer">elm</a>.
     </p>
 
     <p class="f4 tl measure-narrow lh-copy p">
-      Being an Industrial Design grad from <a href="http://cadc.auburn.edu/design/design-degrees-programs/indd" alt="Auburn University Industrial Design">Auburn University</a> you know I'm
+      Being an Industrial Design grad from <a href="http://cadc.auburn.edu/design/design-degrees-programs/indd" title="Auburn University Industrial Design" target="_blank" rel="noopener noreferrer">Auburn University</a> you know I'm
       into making stuff (wood working, 3d printing, home automation things, etc).
     </p>
 
     <p class="f4 tl measure-narrow lh-copy p">
-      Oh, and I have the dopest GSD mix, Kona, for a best bud.
+      I have a pretty rad German Shepherd mix, named <a href="https://www.instagram.com/p/BNC3irCA_xuQN6me9cTvPngAo54ZPovSgC1DO80" title="Kona!" target="_blank" rel="noopener noreferrer">Kona</a>.
     </p>
 
     <p class="f4 tl measure-narrow lh-copy p">
-      I have an unhealthy obsession with <a href="https://github.com/megalithic/dotfiles" title="dotfiles!">dotfiles</a>.
+      Also, I have an unhealthy obsession with <a href="https://github.com/megalithic/dotfiles" title="dotfiles!" target="_blank" rel="noopener noreferrer">dotfiles</a>.
     </p>
     <p class="tc w-100 w-50-ns f4">∞</p>
 
@@ -36,10 +36,10 @@
     </header>
 
     <p class="mt2">
-      <span class="b mr2"><a href="https://www.github.com/megalithic" title="github" class="link">github</a></span>
-      <span class="b mr2"><a href="https://www.twitter.com/megalithic" title="twitter" class="link">twitter</a></span>
-      <span class="b mr2"><a href="https://www.instagram.com/megalithic" title="instagram" class="link">instagram</a></span>
-      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" title="email" class="link">email</a></span>
+      <span class="b mr2"><a href="https://www.github.com/megalithic" title="github" class="link" target="_blank" rel="noopener noreferrer">github</a></span>
+      <span class="b mr2"><a href="https://www.twitter.com/megalithic" title="twitter" class="link" target="_blank" rel="noopener noreferrer">twitter</a></span>
+      <span class="b mr2"><a href="https://www.instagram.com/megalithic" title="instagram" class="link" target="_blank" rel="noopener noreferrer">instagram</a></span>
+      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" title="email" class="link" target="_blank" rel="noopener noreferrer">email</a></span>
     </p>
   </div>
 </section>
