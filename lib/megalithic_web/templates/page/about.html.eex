@@ -7,8 +7,8 @@
 
   <div class="mt4 mt2-ns">
     <p class="f4 tl measure-narrow lh-copy p">
-      Hey, Seth here. I presently work as a remote software engineer at <a href="https://enbala.com" title="enbala" target="_blank" rel="noopener noreferrer">enbala</a>,
-      building software for distributed and alternative energy. I get to play with awesome tech like <a href="https://elixir-lang.org" title="elixir" target="_blank" rel="noopener noreferrer">elixir</a> and <a href="https://elm-lang.org" title="elm" target="_blank" rel="noopener noreferrer">elm</a>.
+      Hiya, Seth here. I presently work as a remote software engineer based out of Birmingham, AL for <a href="https://enbala.com" title="enbala" target="_blank" rel="noopener noreferrer">Enbala</a>,
+      building software for distributed and alternative energy. I get to play with awesome tech like <a href="https://elixir-lang.org" title="elixir-lang" target="_blank" rel="noopener noreferrer">elixir-lang</a> and <a href="https://elm-lang.org" title="elm-lang" target="_blank" rel="noopener noreferrer">elm-lang</a>.
     </p>
 
     <p class="f4 tl measure-narrow lh-copy p">
@@ -36,10 +36,10 @@
     </header>
 
     <p class="mt2">
-      <span class="b mr2"><a href="https://www.github.com/megalithic" title="github" class="link" target="_blank" rel="noopener noreferrer">github</a></span>
-      <span class="b mr2"><a href="https://www.twitter.com/megalithic" title="twitter" class="link" target="_blank" rel="noopener noreferrer">twitter</a></span>
-      <span class="b mr2"><a href="https://www.instagram.com/megalithic" title="instagram" class="link" target="_blank" rel="noopener noreferrer">instagram</a></span>
-      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" title="email" class="link" target="_blank" rel="noopener noreferrer">email</a></span>
+      <span class="b mr2"><a href="https://www.github.com/megalithic" title="github@megalithic" class="link" target="_blank" rel="noopener noreferrer">github</a></span>
+      <span class="b mr2"><a href="https://www.twitter.com/megalithic" title="twitter@megalithic" class="link" target="_blank" rel="noopener noreferrer">twitter</a></span>
+      <span class="b mr2"><a href="https://www.instagram.com/megalithic" title="instagram@megalithic" class="link" target="_blank" rel="noopener noreferrer">instagram</a></span>
+      <span class="b mr2"><a href="mailto:seth.messer@gmail.com" title="seth.messer@gmail.com" class="link" target="_blank" rel="noopener noreferrer">email</a></span>
     </p>
   </div>
 </section>
