@@ -15,14 +15,14 @@
         <header class="pa3 pa0-ns">
           <section class="container">
             <div class="w-100 db">
-              <nav class="tl w-100">
+              <nav class="tc tl-ns w-100">
                 <a href="/" class="link highlight-link hover-light-silver f4">megalithic industries</a>
-                <ul class="fn fr-ns list dib ma0 pa0 mt3 mt0-ns">
-                  <li class="dib mr2-ns"><a href="/thoughts/" class="link hover-gold">thoughts</a></li>
-                  <li class="dib mr2-ns">○</li>
-                  <li class="dib mr2-ns"><a href="/canon/" class=" link hover-gold">canon</a></li>
-                  <li class="dib mr2-ns">○</li>
-                  <li class="dib mr2-ns"><a href="/about/" class=" link hover-gold">about</a></li>
+                <ul class="fn fr-ns list dib ma0 pa0 mt3 mt0-ns tc center w-100 w-auto-ns">
+                  <li class="dib mr2-ns pa2 pa0-ns"><a href="/thoughts/" class="link hover-gold">thoughts</a></li>
+                  <li class="dib mr2-ns pa2 pa0-ns">○</li>
+                  <li class="dib mr2-ns pa2 pa0-ns"><a href="/canon/" class=" link hover-gold">canon</a></li>
+                  <li class="dib mr2-ns pa2 pa0-ns">○</li>
+                  <li class="dib mr2-ns pa2 pa0-ns"><a href="/about/" class=" link hover-gold">about</a></li>
                 </ul>
               </nav>
             </div>

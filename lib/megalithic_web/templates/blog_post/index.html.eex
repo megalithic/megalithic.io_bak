@@ -1,9 +1,9 @@
 <%= if @posts != nil and Enum.count(@posts) > 0 do %>
   <section class="mw7 center">
-    <h2 class=" fw1 ph3 ph0-l pv2">thoughts</h2>
+    <h2 class=" fw1 pv2">thoughts</h2>
     <%= for post <- @posts do %>
       <article class="bt bb b--black-10">
-        <a class="db pv4 ph3 ph0-l no-underline black dim" href="<%= Routes.blog_post_path(@conn, :show, post.slug) %>">
+        <a class="db pv4 no-underline black dim" href="<%= Routes.blog_post_path(@conn, :show, post.slug) %>">
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
               <img src="<%= Routes.static_path(@conn, "/images/#{post.image}") %>" class="db" alt="<%= post.image %>">
