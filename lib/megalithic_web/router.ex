@@ -13,12 +13,19 @@ defmodule MegalithicWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/", MegalithicWeb, host: "setup." do
+    pipe_through :browser
+
+    get "/", PageController, :setup
+  end
+
   scope "/", MegalithicWeb do
     pipe_through :browser
 
     get "/", PageController, :index
     get "/about", PageController, :about
     get "/canon", PageController, :canon
+    get "/setup", PageController, :setup
     get "/thoughts", BlogPostController, :index
     get "/thoughts/:slug", BlogPostController, :show
   end

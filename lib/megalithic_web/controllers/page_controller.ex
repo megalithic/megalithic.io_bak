@@ -13,4 +13,8 @@ defmodule MegalithicWeb.PageController do
   def canon(conn, _params) do
     render(conn, "canon.html")
   end
+
+  def setup(conn, _params) do
+    render(conn, "setup.html")
+  end
 end
