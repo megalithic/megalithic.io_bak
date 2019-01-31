@@ -7,11 +7,9 @@ image: chat-setup.png
 
 For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a [ZNC IRC bouncer](https://wiki.znc.in/ZNC), [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing megalithic industries to life. I wiped the droplet clean, and started from scratch; in the process, I lost all of my settings (yikes).
 
-So, that just means I have blog post content now.
+So, that just means I have blog post content now; all in an effort to help others wanting to setup a modern day [weechat](https://weechat.org) chat interface, as well as to provide references for me to go back to should I get squirrely, and wipe my setup again without backing up.
 
-In an effort to help others wanting to setup a modern day [weechat](https://weechat.org) chat interface, as well as, references for me to go back to should I get squirrely, and wipe my setup again without backing up.
-
-Hopefully, by the end of this post, you'll have a fully working weechat cli interface, that will give you the ability to hook into IRC (via your own ZNC IRC bouncer), [bitlbee](https://www.bitlbee.org) (for Google Hangouts, among other things), and finally, wee-slack (a great python script that allows for communications with Slack's websockets API).
+Hopefully, by the end of this post, you'll have a fully working weechat CLI interface, that will give you the ability to hook into IRC (via your own ZNC IRC bouncer), [bitlbee](https://www.bitlbee.org) (for Google Hangouts, among other things), and finally, [wee-slack](https://github.com/wee-slack/wee-slack) (a great python script that allows for communications with Slack's websockets API).
 
 We're going to just assume that you have a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet [all setup and secured](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04).
 
@@ -186,3 +184,4 @@ Happy CLI chatting!
 - [freenode](https://freenode.net)
 - [bitlbee](https://bitlbee.org)
 - [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/overview)
+- [wee-slack](https://github.com/wee-slack/wee-slack)
