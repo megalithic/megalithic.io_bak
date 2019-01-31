@@ -1,5 +1,5 @@
 <%= if @posts != nil and Enum.count(@posts) > 0 do %>
-  <section class="mw7 center">
+  <section class="mw8 center">
     <h2 class=" fw1 pv2">thoughts</h2>
     <%= for post <- @posts do %>
       <article class="bt bb b--black-10">
