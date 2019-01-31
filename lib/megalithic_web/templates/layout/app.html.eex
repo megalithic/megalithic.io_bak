@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.1/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.1/highlight.min.js"></script>
+    <%# <script>hljs.initHighlightingOnLoad();</script> %>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
   </head>
   <body class="pa4-l normal">
     <div class"bg-white h-100 pa3 ph0-l pv6-l">
@@ -48,6 +56,5 @@
     </div>
 
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
