@@ -47,3 +47,37 @@ nav a:link {
   width: calc(100%);
   z-index: -1;
 }
+
+.post-content code.inline {
+  font-size: 1.1em;
+  font-family: monospace;
+  background: #eeeeee;
+}
+
+.post-content code:not(.inline) {
+  display: block;
+  padding: 0.15em;
+  background: #292929;
+  color: #fafafa;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 0.15em;
+  /* white-space: pre-wrap; */
+  /* word-wrap: break-word; */
+  font-size: 1em;
+  font-family: monospace;
+  overflow: hidden;
+  overflow-x: scroll;
+  line-height: 1.3em;
+}
+
+.post-content code:not(.inline):before {
+  display: block;
+  width: calc(100%);
+  margin-left: -2px;
+  margin-top: -2px;
+  padding: 2px;
+  content: attr(class);
+  background: #9baecf;
+  font-style: italic;
+}

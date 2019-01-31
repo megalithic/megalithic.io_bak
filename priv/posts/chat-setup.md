@@ -1,11 +1,11 @@
 ---
 title: digital ocean bitlbee and znc setup
 date: 2019-01-29
-intro: Having recently rebuilt my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet, I thought it would be good to document the process, as a beginner's guide, of setting up [bitlbee](https://www.bitlbee.org), ZNC, and weechat on a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet.
+intro: Having recently rebuilt and setup my webserver, I thought it would be good to document the process, as a beginner's guide, of setting up bitlbee, ZNC, and weechat on a Digital Ocean droplet.
 image: chat-setup.png
 ---
 
-For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a ZNC IRC bouncer, [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing megalithic industries to life. I wiped the droplet clean, and started from scratch; in the process, lost all of my settings (yikes).
+For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a ZNC IRC bouncer, [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing megalithic industries to life. I wiped the droplet clean, and started from scratch; in the process, I lost all of my settings (yikes).
 
 So, that just means I have blog post content now.
 
@@ -13,11 +13,11 @@ In an effort to help others wanting to setup a modern day [weechat](https://weec
 
 Hopefully, by the end of this post, you'll have a fully working weechat cli interface, that will give you the ability to hook into IRC (via your own ZNC IRC bouncer), [bitlbee](https://www.bitlbee.org) (for Google Hangouts, among other things), and finally, wee-slack (a great python script that allows for communications with Slack's websockets API).
 
-We're going to just assume that you have a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet all setup and secured.
+We're going to just assume that you have a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet [all setup and secured](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04).
 
 ## ZNC
 
-Let's install ZNC and setup a user to run ZNC under. This also generates a config file for you. It will walk you through some defaults, and let you fill in important details. As part of those details, let's go ahead and setup Freenode as our initial IRC server, and remember the port you set for ZNC (we'll assume 5000).
+Let's install [ZNC](https://wiki.znc.in/ZNC) and setup a user to run ZNC under. This also generates a config file for you. It will walk you through some defaults, and let you fill in important details. As part of those details, let's go ahead and setup Freenode as our initial IRC server, and remember the port you set for ZNC (we'll assume 5000).
 
 
 #### Installation
@@ -85,7 +85,7 @@ Assuming you setup the `nickserv` module in ZNC, as well as some initial channel
 
 ## Bitlbee
 
-Now that we have IRC things taken care of with ZNC, let's install [bitlbee](https://www.bitlbee.org) and libpurple so that we can get Google Hangouts working with weechat. We'll need to use Mercurial for version control for connecting the dots between libpurple and hangouts. Finally, we'll build the purple-hangouts project.
+Now that we have IRC things taken care of with ZNC, let's install [bitlbee](https://www.bitlbee.org) and libpurple so that we can get Google Hangouts working with weechat. We'll need to use Mercurial for version control for connecting the dots between libpurple and hangouts. Finally, we'll build the [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/overview) project.
 
 #### Installation
 
