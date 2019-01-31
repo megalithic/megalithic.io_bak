@@ -9,13 +9,16 @@ p {
   margin-top: 0.25em;
 }
 
-p a {
+p a,
+li a {
   color: #ffb700;
   opacity: 1;
   transition: opacity 0.15s ease-in;
 }
 p a:hover,
-p a:focus {
+p a:focus,
+li a:hover,
+li a:focus {
   opacity: 0.5;
   transition: opacity 0.15s ease-in;
 }

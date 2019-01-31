@@ -5,7 +5,7 @@ intro: Having recently rebuilt and setup my webserver, I thought it would be goo
 image: chat-setup.png
 ---
 
-For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a ZNC IRC bouncer, [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing megalithic industries to life. I wiped the droplet clean, and started from scratch; in the process, I lost all of my settings (yikes).
+For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a [ZNC IRC bouncer](https://wiki.znc.in/ZNC), [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing megalithic industries to life. I wiped the droplet clean, and started from scratch; in the process, I lost all of my settings (yikes).
 
 So, that just means I have blog post content now.
 
@@ -165,14 +165,23 @@ You'll be presented with a private message from `purple_request_0`. It prompts y
 
 Lastly we need to save our configs in weechat/bitlbee!
 
-For bitlbee, while you're still in the bitlbee buffer:
+For bitlbee, while you're still in the bitlbee buffer: `save`
 
-```
-save
-```
+For weechat, from any buffer: `/save`
 
-For weechat, in general (from any buffer):
 
-```
-/save
-```
+## Fin!
+
+That's it! You should now have a running ZNC server and bitlbee server on your [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet, as well as your local weechat instance auto-connecting to both bitlbee and ZNC.
+
+Happy CLI chatting!
+
+
+### Links
+
+- [Digital Ocean](https://m.do.co/c/6abe22c9c487)
+- [Initial droplet setup for Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
+- [weechat](https://weechat.org)
+- [ZNC](https://wiki.znc.in/ZNC)
+- [bitlbee](https://bitlbee.org)
+- [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/overview)
