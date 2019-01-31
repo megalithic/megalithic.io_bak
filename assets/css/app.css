@@ -58,10 +58,6 @@ nav a:link {
 }
 
 .post-content code:not(.inline) {
-  display: block;
-  padding: 0.15em;
-  background: #292929;
-  color: #fafafa;
   font-weight: 400;
   font-style: normal;
   border-radius: 0.15em;
@@ -69,8 +65,6 @@ nav a:link {
   /* word-wrap: break-word; */
   font-size: 1em;
   font-family: monospace;
-  overflow: hidden;
-  overflow-x: scroll;
   line-height: 1.3em;
 }
 

@@ -35,7 +35,7 @@ First, create a systemd service: `sudo vim /etc/systemd/system/znc.service`
 
 Use the following service config:
 
-```sh
+```ini
 [Unit]
 Description=ZNC Service
 After=network-online.target
@@ -105,7 +105,7 @@ First, create a systemd service: `sudo vim /lib/systemd/system/bitlbee.service`
 
 Use the following service config:
 
-```sh
+```ini
 [Unit]
 Description=BitlBee IRC/IM gateway
 
