@@ -17,7 +17,7 @@ We're going to just assume that you have a [Digital Ocean](https://m.do.co/c/6ab
 
 ## ZNC
 
-Let's install [ZNC](https://wiki.znc.in/ZNC) and setup a user to run ZNC under. This also generates a config file for you. It will walk you through some defaults, and let you fill in important details. As part of those details, let's go ahead and setup Freenode as our initial IRC server, and remember the port you set for ZNC (we'll assume 5000).
+Let's install [ZNC](https://wiki.znc.in/ZNC) and setup a user to run ZNC under. This also generates a config file for you. It will walk you through some defaults, and let you fill in important details. As part of those details, let's go ahead and setup [freenode](https://freenode.net) as our initial IRC server, and remember the port you set for ZNC (we'll assume 5000).
 
 
 #### Installation
@@ -183,5 +183,6 @@ Happy CLI chatting!
 - [Initial droplet setup for Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
 - [weechat](https://weechat.org)
 - [ZNC](https://wiki.znc.in/ZNC)
+- [freenode](https://freenode.net)
 - [bitlbee](https://bitlbee.org)
 - [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/overview)
