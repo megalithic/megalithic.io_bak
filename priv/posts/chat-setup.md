@@ -22,7 +22,7 @@ Let's install [ZNC](https://wiki.znc.in/ZNC) and setup a user to run ZNC under. 
 
 #### Installation
 
-```sh
+```bash
 cd ~
 sudo apt install -y znc znc-dev
 sudo useradd --create-home -d /var/lib/znc --system --shell /sbin/nologin --comment "User to run ZNC daemon" --user-group znc
@@ -50,7 +50,7 @@ WantedBy=multi-user.target
 
 Reload the daemon and enable ZNC service
 
-```sh
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable znc
 ```
@@ -89,7 +89,7 @@ Now that we have IRC things taken care of with ZNC, let's install [bitlbee](http
 
 #### Installation
 
-```sh
+```bash
 cd ~
 sudo mkdir -p /var/lib/bitlbee
 sudo apt-get install -y python-pip python-potr bitlbee-common bitlbee-libpurple bitlbee-plugin-otr libpurple-dev libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make
@@ -119,7 +119,7 @@ WantedBy=multi-user.target
 
 Reload the daemon and enable bitlbee service
 
-```sh
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable bitlbee
 ```
