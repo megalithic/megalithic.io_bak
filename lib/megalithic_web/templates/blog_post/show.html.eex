@@ -1,5 +1,3 @@
-<%# <p><a href="<%= Routes.page_path(@conn, :index) %1>">&laquo; Back to index</a></a> %>
-
 <h2 class="fw1 pv2">thoughts</h2>
 <article class="cf pv4 bt b--black-10">
   <header class="fn fl-ns w-40-ns pr4-ns">

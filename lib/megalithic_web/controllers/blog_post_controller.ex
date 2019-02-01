@@ -8,8 +8,16 @@ defmodule MegalithicWeb.BlogPostController do
 
   def show(conn, %{"slug" => slug}) do
     case Megalithic.BlogService.get_by_slug(slug) do
-      {:ok, post} -> render(conn, "show.html", post: post)
-      :not_found -> not_found(conn)
+      {:ok, post} ->
+        render(conn, "show.html",
+          post: post,
+          title: post.title,
+          description: post.intro,
+          keywords: post.keywords
+        )
+
+      :not_found ->
+        not_found(conn)
     end
   end
 

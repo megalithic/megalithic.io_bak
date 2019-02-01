@@ -1,5 +1,11 @@
 defmodule Megalithic.BlogPost do
-  defstruct slug: "", title: "", date: "", intro: "", content: "", image: ""
+  defstruct slug: "",
+            title: "",
+            date: "",
+            intro: "",
+            content: "",
+            image: "",
+            keywords: ""
 
   def compile(file) do
     post = %Megalithic.BlogPost{
@@ -34,7 +40,8 @@ defmodule Megalithic.BlogPost do
         date: get_prop(props, "date") |> Calendar.Date.Parse.iso8601!(),
         intro: get_prop(props, "intro"),
         image: get_prop(props, "image") && get_prop(props, "image"),
-        content: content
+        content: content,
+        keywords: get_prop(props, "keywords") && get_prop(props, "keywords")
     }
   end
 
