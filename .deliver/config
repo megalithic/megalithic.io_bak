@@ -48,11 +48,11 @@ pre_erlang_clean_compile() {
     "
 
   status "Generating sitemap"
-    __sync_remote "
-      [ -f ~/.profile ] && source ~/.profile
-      set -e
-      # cd '$BUILD_AT'/assets
-      mix sitemap
+    __sync_remote " # runs the commands on the build host
+      [ -f ~/.profile ] && source ~/.profile # load profile (optional)
+      set -e # fail if any command fails (recommended)
+      cd '$BUILD_AT' # enter the build directory on the build host (required)
+      APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD sitemap $SILENCE
     "
 
   status "Running phx.digest" # log output prepended with "----->"
