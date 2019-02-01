@@ -12,7 +12,7 @@ So, that just means I have blog post content now; all in an effort to help other
 
 By the end of this post, you'll have a fully working weechat CLI interface setup on your local machine, that will give you the ability to hook into IRC (via your own ZNC IRC bouncer), [bitlbee](https://www.bitlbee.org) (for Google Hangouts, amongst other services), and finally, [wee-slack](https://github.com/wee-slack/wee-slack) (a great python script that allows for communications with Slack's websockets API).
 
-This article assumes that you have already have a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet [setup and secured](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04).
+This article assumes that you have already [setup and secured](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04) a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet.
 
 ## ZNC
 
