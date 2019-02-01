@@ -43,7 +43,8 @@ defmodule Megalithic.MixProject do
       {:distillery, "~> 2.0.12"},
       {:earmark, "~> 1.3.1"},
       {:calendar, "~> 0.17.4"},
-      {:yamerl, "~> 0.7.0"}
+      {:yamerl, "~> 0.7.0"},
+      {:sitemap, "~> 1.1", runtime: false}
     ]
   end
 end
