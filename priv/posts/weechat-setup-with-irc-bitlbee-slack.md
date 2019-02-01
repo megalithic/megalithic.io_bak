@@ -1,21 +1,21 @@
 ---
-title: digital ocean bitlbee and znc setup
+title: How to connect weechat to IRC, bitlbee, and Slack
 date: 2019-01-29
-intro: Having recently rebuilt and setup my webserver, I thought it would be good to document the process, as a beginner's guide, of setting up bitlbee, ZNC, and weechat on a Digital Ocean droplet.
+intro: Over the last several years, I've been using a consolidated online chat experience with weechat, a command-line interface IRC client. I have it connected to my Digital Ocean droplet running bitlbee (for Google Hangouts) and ZNC (an IRC bouncer). I recently wiped my droplet and need to set all of that up again, so, I figured I'd take you along for the journey of installing all of the necessary tools and configuring everything.
 image: chat-setup.png
 ---
 
-For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a [ZNC IRC bouncer](https://wiki.znc.in/ZNC), [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing megalithic industries to life. I wiped the droplet clean, and started from scratch; in the process, I lost all of my settings (yikes).
+For the longest time, my [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet was used for random geeky things, such as a [ZNC IRC bouncer](https://wiki.znc.in/ZNC), [bitlbee](https://www.bitlbee.org), and a few other tools. Well, that changed when I decided to rebuild that droplet for bringing [megalithic industries](https://megalithic.io) to life. I decided to wipe the droplet clean, and start from scratch; in the process, I lost all of my configurations (yikes).
 
-So, that just means I have blog post content now; all in an effort to help others wanting to setup a modern day [weechat](https://weechat.org) chat interface, as well as to provide references for me to go back to should I get squirrely, and wipe my setup again without backing up.
+So, that just means I have blog post content now; all in an effort to help others wanting to set up a modern day [weechat](https://weechat.org) command-line chat interface (complete with a ZNC server, bitlbee, and [wee-slack](https://github.com/wee-slack/wee-slack)).
 
-Hopefully, by the end of this post, you'll have a fully working weechat CLI interface, that will give you the ability to hook into IRC (via your own ZNC IRC bouncer), [bitlbee](https://www.bitlbee.org) (for Google Hangouts, among other things), and finally, [wee-slack](https://github.com/wee-slack/wee-slack) (a great python script that allows for communications with Slack's websockets API).
+By the end of this post, you'll have a fully working weechat CLI interface setup on your local machine, that will give you the ability to hook into IRC (via your own ZNC IRC bouncer), [bitlbee](https://www.bitlbee.org) (for Google Hangouts, amongst other services), and finally, [wee-slack](https://github.com/wee-slack/wee-slack) (a great python script that allows for communications with Slack's websockets API).
 
-We're going to just assume that you have a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet [all setup and secured](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04).
+This article assumes that you have already have a [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet [setup and secured](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04).
 
 ## ZNC
 
-Let's install [ZNC](https://wiki.znc.in/ZNC) and setup a user to run ZNC under. This also generates a config file for you. It will walk you through some defaults, and let you fill in important details. As part of those details, let's go ahead and setup [freenode](https://freenode.net) as our initial IRC server, and remember the port you set for ZNC (we'll assume 5000).
+Let's install [ZNC](https://wiki.znc.in/ZNC) and setup a user to run ZNC under. This also generates a config file for you. It will walk you through some defaults, and let you fill in important details. As part of those details, let's go ahead and setup [freenode](https://freenode.net) as our initial IRC server, and remember the port you set for ZNC (we'll assume `5000`).
 
 
 #### Installation
@@ -57,7 +57,7 @@ sudo systemctl enable znc
 
 With installation done we need to setup our main ZNC user and all of its config.
 
-First, let's try visiting the ZNC web config panel at http://<digital_ocean_ip>:5000.
+First, let's try visiting the ZNC web config panel at `http://<droplet_ip>:5000`.
 
 From here you should be able to log in with the user and password you defined during initial ZNC setup.
 
@@ -73,7 +73,7 @@ We're going to assume you already have weechat installed on your OS of choice (f
 From within weechat, we're going to add a server for freenode, and set it up to auto-connect for us..
 
 ```
-/server add freenode <digital_ocean_ip>/<port_we_set_above_for_znc> -autoconnect
+/server add freenode <droplet_ip>/<port_for_znc> -autoconnect
 /connect freenode
 /save
 ```
@@ -145,7 +145,7 @@ Configuration of bitlbee and purple-hangouts should be done, so now we just need
 We'll setup a hangouts server (could be called anything you want). Next we'll connect to it, then we'll register a super_secret_password. Lastly we'll setup weechat to auto log us in each time.
 
 ```
-/server add hangouts <digital_ocean_ip>/<port_we_set_above_for_bitlbee> -autoconnect
+/server add hangouts <droplet_ip>/<port_for_bitlbee> -autoconnect
 /connect hangouts
 register <super_secret_password>
 /set irc.server.hangouts.command "/msg &bitlbee /OPER identify <super_secret_password>"
@@ -168,9 +168,38 @@ For bitlbee, while you're still in the bitlbee buffer: `save`
 For weechat, from any buffer: `/save`
 
 
-## Fin!
+## Slack
 
-That's it! You should now have a running ZNC server and bitlbee server on your [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet, as well as your local weechat instance auto-connecting to both bitlbee and ZNC.
+The best way to connect to your various [Slack](https://slack.com/) groups is with a python weechat plugin called wee-slack. It supports real-time chat via websockets. This means that you will get a TON of amazing features like, typing notifications, emoji reaction support, interacting with your status, threads, and [so much more](https://github.com/wee-slack/wee-slack#features).
+
+Let's get that all setup!
+
+#### Installation
+
+wee-slack has one system dependency, that is the python websocket pip plugin, to install on macOS: `pip install websocket-client`.
+
+Now that our dependency is installed, let's get wee-slack installed, and symlinked to autoload when weechat starts up:
+
+```bash
+cd ~/.weechat/python
+wget https://raw.githubusercontent.com/wee-slack/wee-slack/master/wee_slack.py
+ln -sfv ../wee_slack.py autoload
+```
+
+#### Configuration
+
+As to not take away from the tireless work and documentation from the wee-slack contributors, I'm going to link you to their setup section for getting your [Slack API token's created and stored in weechat](https://github.com/wee-slack/wee-slack#4-add-your-slack-api-keys).
+
+
+After you complete the API token creation and registration processes linked above, you'll want to be sure to `/save` within weechat to save all of this configuration.
+
+## Fin
+
+That does it folks!
+
+You now have a working ZNC IRC bouncer, and bitlbee server setup on your own [Digital Ocean](https://m.do.co/c/6abe22c9c487) droplet. You also now have weechat setup on your local machine, complete with connectivity to IRC freenode via ZNC, Google Hangouts via bitlbee, and to Slack via wee-slack.
+
+If you'd like to check out a fully working weechat setup, feel free to [peruse my dotfiles](https://github.com/megalithic/dotfiles/tree/master/weechat). This is setup for my purposes, but should give a really good idea as to what all is possible.
 
 Happy CLI chatting!
 
@@ -179,9 +208,11 @@ Happy CLI chatting!
 
 - [Digital Ocean](https://m.do.co/c/6abe22c9c487)
 - [Initial droplet setup for Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
-- [weechat](https://weechat.org)
+- [Weechat](https://weechat.org)
 - [ZNC](https://wiki.znc.in/ZNC)
-- [freenode](https://freenode.net)
-- [bitlbee](https://bitlbee.org)
+- [Freenode](https://freenode.net)
+- [Bitlbee](https://bitlbee.org)
 - [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/overview)
 - [wee-slack](https://github.com/wee-slack/wee-slack)
+- [Slack](https://slack.com)
+- [My dotfiles](https://github.com/megalithic/dotfiles/tree/master/weechat)
