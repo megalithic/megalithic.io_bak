@@ -6,7 +6,7 @@ defmodule MegalithicWeb.Sitemap do
   use Sitemap,
     compress: false,
     host: "https://megalithic.io",
-    files_path: "priv/static/sitemaps",
+    files_path: "priv/sitemaps",
     public_path: "sitemaps/"
 
   alias MegalithicWeb.Endpoint
