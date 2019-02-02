@@ -78,3 +78,10 @@ nav a:link {
 /*   background: #9baecf; */
 /*   font-style: italic; */
 /* } */
+
+/* hacky! FIXME: */
+@media screen and (min-width: 30em) {
+  .container .w-55-ns {
+    width: 55%;
+  }
+}

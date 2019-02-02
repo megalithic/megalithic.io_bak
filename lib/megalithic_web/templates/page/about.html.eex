@@ -1,4 +1,4 @@
-<section class="mw7 center">
+<section class="mw8 center">
   <h2 class=" fw1 pv2">about</h2>
   <div class="mt1 relative top--1-l measure-wide measure-narrow-ns fr-l">
     <blockquote class="pa0 ml0 b"><em>"I believe in Christianity as I believe that the sun has risen: not only because I see it, but because by it I see everything else."</em></blockquote>
@@ -6,26 +6,26 @@
   </div>
 
   <div class="mt4 mt2-ns">
-    <p class="f4 tl measure-narrow lh-copy p">
+    <p class="f4 tl measure lh-copy p">
       Hiya, Seth here. I presently work as a remote software engineer based out of Birmingham, AL for <a href="https://enbala.com" title="enbala" target="_blank" rel="noopener noreferrer">Enbala</a>,
       building software for distributed and alternative energy. I get to play with awesome tech such as <a href="https://elixir-lang.org" title="elixir-lang" target="_blank" rel="noopener noreferrer">elixir-lang</a>, <a href="https://elm-lang.org" title="elm-lang" target="_blank" rel="noopener noreferrer">elm-lang</a>, and <a href="https://graphql.org" title="graphql" target="_blank" rel="noopener noreferrer">graphql</a>.
     </p>
 
-    <p class="f4 tl measure-narrow lh-copy p">
+    <p class="f4 tl measure lh-copy p">
       Being an Industrial Design grad from <a href="http://cadc.auburn.edu/design/design-degrees-programs/indd" title="Auburn University Industrial Design" target="_blank" rel="noopener noreferrer">Auburn University</a> you know I'm
       into making stuff (wood working, 3d printing, home automation things, etc).
     </p>
 
-    <p class="f4 tl measure-narrow lh-copy p">
+    <p class="f4 tl measure lh-copy p">
       I have a pretty rad German Shepherd mix, named <a href="https://www.instagram.com/p/BNC3irCA_xuQN6me9cTvPngAo54ZPovSgC1DO80" title="Kona!" target="_blank" rel="noopener noreferrer">Kona</a>.
     </p>
 
-    <p class="f4 tl measure-narrow lh-copy p">
+    <p class="f4 tl measure lh-copy p">
       Also, I have an unhealthy obsession with <a href="https://github.com/megalithic/dotfiles" title="dotfiles!" target="_blank" rel="noopener noreferrer">dotfiles</a>.
     </p>
-    <p class="tc w-100 w-50-ns f4">∞</p>
+    <p class="tc w-100 w-55-ns f4">∞</p>
 
-    <%# <p class="f4 tl measure-narrow lh-copy p tc"> %>
+    <%# <p class="f4 tl measure lh-copy p tc"> %>
     <%#   <img class="w-50 br3" src="<%= Routes.static_path(@conn, "/images/kona.jpg") %1>" alt="kona!" /> %>
     <%# </p> %>
   </div>
