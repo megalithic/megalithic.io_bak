@@ -19,9 +19,9 @@ defmodule MegalithicWeb.Router do
     get "/", PageController, :setup
   end
 
-  scope "/", MegalithicWeb, host: "stats." do
-    pipe_through :browser
-  end
+  # scope "/", MegalithicWeb, host: "stats." do
+  #   pipe_through :browser
+  # end
 
   scope "/", MegalithicWeb do
     pipe_through :browser
