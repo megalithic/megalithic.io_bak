@@ -47,7 +47,7 @@
 
           <%= render @view_module, @view_template, assigns %>
         </main>
-        <footer class="pv5 pv6-l">
+        <footer class="pv5 pv6-l tc tl-ns">
           <p class="f6"><span class="dib mr4 mr5-ns">&copy; <%= DateTime.utc_now().year %> megalithic industries</span>
             <%# <a class="link hover-gold" href="https://www.github.com/megalithic" title="github">github</a> / %>
             <%# <a class="link hover-gold" href="https://www.twitter.com/megalithic" title="twitter">twitter</a> / %>
