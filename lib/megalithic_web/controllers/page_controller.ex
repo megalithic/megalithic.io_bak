@@ -17,4 +17,8 @@ defmodule MegalithicWeb.PageController do
   def setup(conn, _params) do
     render(conn, "setup.html")
   end
+
+  def mercantile(conn, _params) do
+    render(conn, "mercantile.html")
+  end
 end

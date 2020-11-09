@@ -29,6 +29,7 @@ defmodule MegalithicWeb.Router do
     get "/", PageController, :index
     get "/about", PageController, :about
     get "/canon", PageController, :canon
+    get "/mercantile", PageController, :mercantile
     get "/setup", PageController, :setup
     get "/thoughts", BlogPostController, :index
     get "/thoughts/:slug", BlogPostController, :show

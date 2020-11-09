@@ -18,6 +18,7 @@ defmodule MegalithicWeb.Sitemap do
       add(Routes.page_path(Endpoint, :about), priority: 0.5, changefreq: "hourly")
       add(Routes.page_path(Endpoint, :canon), priority: 0.5, changefreq: "hourly")
       add(Routes.page_path(Endpoint, :setup), priority: 0.5, changefreq: "hourly")
+      add(Routes.page_path(Endpoint, :mercantile), priority: 0.5, changefreq: "hourly")
       add(Routes.blog_post_path(Endpoint, :index), priority: 0.5, changefreq: "hourly")
       # add(Routes.blog_post_path(Endpoint, :show), priority: 0.5, changefreq: "hourly")
     end
